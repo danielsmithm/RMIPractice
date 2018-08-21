@@ -5,6 +5,12 @@ import java.rmi.Naming;
 import java.rmi.RemoteException;
 import java.rmi.registry.LocateRegistry;
 
+/**
+ *	Classe principal do servidor.
+ *
+ * @author Daniel Smith
+ *
+ */
 public class ServerApplication {
 	
 	public static void main(String[] args) throws RemoteException, MalformedURLException {

@@ -3,6 +3,12 @@ package br.ufrn.server;
 import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
 
+/**
+ * Implementação do excecutor de tarefas.
+ * 
+ * @author Daniel Smith
+ *
+ */
 public class ComputeEngine extends UnicastRemoteObject implements Compute {
 
 	/**
@@ -24,7 +30,14 @@ public class ComputeEngine extends UnicastRemoteObject implements Compute {
 		return task.execute();
 	}
 
-	static ComputeEngine createComputeEngine() throws RemoteException {
+	/**
+	 * Método fábrica estático de visibilidade protected para permitir instanciação do compute engine apenas no servidor.
+	 * 
+	 * @return
+	 * @throws RemoteException
+	 */
+	
+	protected static ComputeEngine createComputeEngine() throws RemoteException {
 		return new ComputeEngine();
 	}
 

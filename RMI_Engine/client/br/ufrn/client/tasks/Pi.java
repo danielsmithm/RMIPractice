@@ -11,11 +11,11 @@ public class Pi implements Task<Double>, Serializable{
 	 */
 	private static final long serialVersionUID = 1L;
 	
-	private int precisionInDigits;
+	private int precision;
 	
 	public Pi(int precisionInDigits) {
 		super();
-		this.precisionInDigits = precisionInDigits;
+		this.precision = precisionInDigits;
 	}
 
 
@@ -25,10 +25,9 @@ public class Pi implements Task<Double>, Serializable{
 		
 		double pi = 0.0;
 		
-		for ( int i = 0; i < precisionInDigits; i++){
+		for ( int i = 0; i < precision; i++){
 			pi += Math.pow(-1, 1)/(2*i)+1;
-		}
-		
+		}		
 		
 		return Double.valueOf(pi);
 	}
